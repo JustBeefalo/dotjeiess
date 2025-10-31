@@ -1,0 +1,12 @@
+{
+	"developer": {
+		"name": "JustBeefalo",
+		"url": "https://github.com/JustBeefalo"
+	},
+	"manifest_version": 3,
+	"name": "Dotjeiess",
+	"options_ui": {
+		"page": "config.html"
+	},
+	"version": "0.0.1"
+}
