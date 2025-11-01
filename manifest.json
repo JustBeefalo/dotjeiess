@@ -1,12 +1,31 @@
 {
+	"background": {
+		"scripts": ["ext/dotjeiess.js"],
+		"type": "module"
+	},
+	"browser_specific_settings": {
+		"gecko": {
+			"id": "Dotjeiess@JustBeefalo"
+		}
+	},
+	"content_scripts": [{
+		"all_frames": true,
+		"js": ["ext/content.js"],
+		"matches": ["<all_urls>"]
+	}],
 	"developer": {
 		"name": "JustBeefalo",
-		"url": "https://github.com/JustBeefalo"
+		"url": "https://github.com/JustBeefalo/dotjeiess"
 	},
+	"host_permissions": ["<all_urls>"],
 	"manifest_version": 3,
 	"name": "Dotjeiess",
 	"options_ui": {
-		"page": "config.html"
+		"page": "pages/config.html"
 	},
-	"version": "0.0.1"
+	"permissions": [
+		"scripting",
+		"storage"
+	],
+	"version": "0.1.0"
 }
