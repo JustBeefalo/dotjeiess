@@ -14,7 +14,7 @@ function* paths(pathname) {
 	normalized = (normalized.length > 0 ? "/" : "") + normalized;
 
 	let segments = normalized.split("/");
-	for (let i = 0; i <= segments.length; ++i) {
+	for (let i = 1; i <= segments.length; ++i) {
 		yield segments.slice(0, i).join("/");
 	}
 }
