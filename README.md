@@ -30,6 +30,9 @@ E.g., `https://www.example.com` might load (in order):
 - `example.com.js`
 - `www.example.com.js`
 
+A leading `_.` in a script name will prevent that script from applying to further subdomains. E.g.,
+`https://example.com` will load `_.example.com.js`, but `https://www.example.com` will not.
+
 The full URL path will also match against scripts under a similar path or parent path.
 
 E.g., `https://www.example.com/directory/page` might load (in order):
@@ -59,3 +62,7 @@ to `https://www.example.com/about` will attempt to load the following scripts/st
 - `http://localhost:5743/www.example.com.css`
 - `http://localhost:5743/www.example.com/about.js`
 - `http://localhost:5743/www.example.com/about.css`
+- `http://localhost:5743/_.www.example.com.js`
+- `http://localhost:5743/_.www.example.com.css`
+- `http://localhost:5743/_.www.example.com/about.js`
+- `http://localhost:5743/_.www.example.com/about.css`

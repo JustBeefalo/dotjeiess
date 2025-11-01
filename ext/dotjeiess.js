@@ -5,11 +5,13 @@ function* subdomains(hostname) {
 	for (let i = names.length - 1; i >= 0; --i) {
 		yield names.slice(i, names.length).join(".");
 	}
+
+	yield "_." + hostname;
 }
 
 function* paths(pathname) {
 	let normalized = pathname.replace(/^[/]+|[/]+$/g, "").replace(/[/]+/, "/");
-	normalized = (normalized.length > 0 ? "/" : "") + normalized
+	normalized = (normalized.length > 0 ? "/" : "") + normalized;
 
 	let segments = normalized.split("/");
 	for (let i = 0; i <= segments.length; ++i) {
